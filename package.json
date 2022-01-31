@@ -1,20 +1,23 @@
 {
-  "name": "urlpattern-polyfill",
-  "version": "1.0.0-rc5",
+  "name": "@sgwilym/urlpattern-polyfill",
+  "version": "1.0.0-rc8",
   "description": "Polyfill for the proposed URLPattern API",
   "repository": {
     "type": "git",
     "url": "https://github.com/kenchris/urlpattern-polyfill"
   },
+  "type": "module",
+  "source": "src/index.ts",
   "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
+  "module": "./dist/index.module.js",
   "unpkg": "./dist/index.umd.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "node": "./dist/index.cjs",
-      "browser": "./dist/index.umd.js"
+      "import": "./dist/index.module.js",
+      "require": "./dist/index.cjs",
+      "browser": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "files": [
